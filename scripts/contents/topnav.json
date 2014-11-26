@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Beranda",
+		"link": "#/"
+	},
+	{
+		"name": "Psikonogram",
+		"link": "javascript:",
+		"target": "#personality"
+	},
+    {
+		"name": "Test Types",
+		"link": "javascript:",
+		"target": "#test-types"
+	},
+    {
+		"name": "General Result Test",
+		"link": "javascript:",
+		"target": "#general-result-test"
+	},
+	{
+		"name": "Masuk/Daftar",
+		"link": "#/login"
+	},
+	{
+		"name": "Hubungi Kami",
+		"link": "javascript:",
+		"target": "#contact-us"
+	}
+]

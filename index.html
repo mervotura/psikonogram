@@ -1,0 +1,20 @@
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title>Selamat Datang di Psikonogram</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.da54a376.css"> <link rel="stylesheet" href="styles/main.b57f926d.css">  <body ng-app="hoqiiApp"> <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <script type="text/ng-template" id="menuTree"><a class="change" ng-href="{{ menu.link }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ng-if="'javascript:' != menu.link">{{ menu.name }} <span ng-if="menu.menus" class="caret"></span></a>
+      <a class="change" ng-href="{{ isNotIndex ? menu.target : 'javascript:'}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" scroll-to="{{ menu.target }}" ng-if="'javascript:' == menu.link">{{ menu.name }} <span ng-if="menu.menus" class="caret"></span></a>
+      <ul ng-if="menu.menus" ng-class="{'dropdown-menu': true}" role="menu">
+        <li ng-repeat="menu in menu.menus" ng-include="'menuTree'" ng-class="change">
+        </li>
+      </ul></script> <span ng-controller="topNavCtrl"> <div id="scroll-nav" class="navbar navbar-inverse navbar-fixed-top scrollclass" ng-class="{'navbar-scroll': !logoTransparent}" dynamic-top-nav> <div class="container"> <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a id="scroll-logo" class="navbar-brand" href="#/"> <img id="top-logo" src="images/logos/logo.bb0b566f.png" alt="logo" ng-show="logoTransparent"> <img id="buttom-logo" src="images/logos/logo_white.7af81c6e.png" alt="logo" style="display: inline; height: 32px" ng-hide="logoTransparent"> </a> </div> <div id="navbar" class="collapse navbar-collapse navbar-right"> <ul class="nav navbar-nav"> <li ng-repeat="menu in menus" ng-include="'menuTree'" ng-class="{'dropdown': true}"></li> </ul> </div> </div><!--/.container--> </div><!--/nav--> <div ng-hide="logoTransparent" style="height:65px"></div> </span> <!-- Add your site or application content here --> <div ng-view=""></div> <footer id="footer" class="midnight-blue" ng-controller="footerCtrl"> <div class="container"> <div class="row"> <div class="col-sm-6"> &copy; 2014 - 2015, <a target="_blank" href="#" title="Hoqii">Psikonogram Systems</a> </div> <div class="col-sm-6"> <ul class="pull-right"> <li ng-repeat="menu in menus"><a href="{{ menu.link }}" ng-bind="menu.name"></a></li> </ul> </div> </div> </div> </footer><!--/#footer--> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <!--
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    --> <!--[if lt IE 9]>
+    <script src="scripts/oldieshim.d48d8270.js"></script>
+    <![endif]--> <script src="scripts/vendor.a8e54a23.js"></script> <script src="scripts/scripts.cc865f5a.js"></script>  
